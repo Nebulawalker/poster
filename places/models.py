@@ -25,3 +25,23 @@ class Place(models.Model):
     class Meta:
         verbose_name = 'Место'
         verbose_name_plural = 'Места'
+
+class PlaceImage(models.Model):
+    index = models.SmallIntegerField(
+        default=0,
+        db_index=True
+    )
+    place = models.ForeignKey(
+        Place,
+        on_delete=models.CASCADE,
+        related_name='images'
+    )
+    image = models.ImageField(
+        verbose_name='Изображение'
+    )
+    class Meta:
+        verbose_name = 'Изображение'
+        verbose_name_plural = 'Изображения'
+
+    def __str__(self):
+        return f'{self.index} {self.place}'
