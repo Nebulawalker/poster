@@ -2,9 +2,12 @@ from django.contrib import admin
 from places.models import Place, PlaceImage
 
 
+class PlaceImageInline(admin.TabularInline):
+    model = PlaceImage
+
 @admin.register(Place)
 class PlaceAdmin(admin.ModelAdmin):
-    pass
+    inlines = [PlaceImageInline, ]
 
 @admin.register(PlaceImage)
 class AdminPlaceImage(admin.ModelAdmin):
