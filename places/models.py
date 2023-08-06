@@ -40,9 +40,10 @@ class PlaceImage(models.Model):
         default=0,
         db_index=True
     )
-    class Meta:
+    class Meta: 
         verbose_name = 'Фотография'
         verbose_name_plural = 'Фотографии'
+        ordering = ['index']
 
     def __str__(self):
         return f'{self.index}) {self.place}'

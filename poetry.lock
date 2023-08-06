@@ -37,6 +37,21 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-admin-sortable2"
+version = "2.1.9"
+description = "Generic drag-and-drop sorting for the List, the Stacked- and the Tabular-Inlines Views in the Django Admin"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-admin-sortable2-2.1.9.tar.gz", hash = "sha256:bf036785c598685a0019eb08340b88fe6ca74bd178033e2290e6c41b62fa4bf1"},
+    {file = "django_admin_sortable2-2.1.9-py3-none-any.whl", hash = "sha256:6de19689cb2f131d256ce19d2fd148728d551943d8463b1d81f6334adfa0b6fc"},
+]
+
+[package.dependencies]
+Django = ">=4.0"
+
+[[package]]
 name = "environs"
 version = "9.5.0"
 description = "simplified environment variable parsing"
@@ -208,4 +223,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "46b0ac1a67b2504e47fb62bbfeb6def9d9efc00e7e3871e26d260c87aa6266f7"
+content-hash = "ab7c7e41f0b0c23504a841bf9445c1add969172d3af26faf4c4a33e3974ff6eb"

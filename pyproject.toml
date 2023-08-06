@@ -10,6 +10,7 @@ python = "^3.11"
 django = "^4.2.1"
 environs = "^9.5.0"
 pillow = "^10.0.0"
+django-admin-sortable2 = "^2.1.9"
 
 
 [build-system]
