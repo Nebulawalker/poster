@@ -44,4 +44,4 @@ class PlaceImage(models.Model):
         verbose_name_plural = 'Изображения'
 
     def __str__(self):
-        return f'{self.index} {self.place}'
+        return f'{self.index}) {self.place}'
