@@ -14,10 +14,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.str('SECRET_KEY', 'REPLACE_ME')
+SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DEBUG', True)
+DEBUG = env.bool('DEBUG')
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', '127.0.0.1')
 
@@ -101,24 +101,25 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'ru-ru'
+LANGUAGE_CODE = env.str('LANGUAGE_CODE', 'ru-ru')
 
-TIME_ZONE = 'Europe/Moscow'
+TIME_ZONE = env.str('TIME_ZONE', 'Europe/Moscow')
 
-USE_I18N = True
+USE_I18N = env.bool('USE_I18N', True)
 
-USE_TZ = True
+USE_TZ = env.bool('USE_TZ', True)
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"), )
 
-os.makedirs(os.path.join(BASE_DIR, 'media'), exist_ok=True)
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_URL = env.str('STATIC_URL', '/static/')
+STATIC_ROOT = env.str('STATIC_ROOT', 'static/')
+
+MEDIA_ROOT = env.str('MEDIA_ROOT', 'media/')
+MEDIA_URL = env.str('MEDIA_URL', '/media/')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
