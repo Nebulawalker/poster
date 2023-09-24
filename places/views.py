@@ -55,7 +55,6 @@ def index(request):
         "type": "FeatureCollection",
         "features": get_features()
     }
-    print(geo_json)
     context = {'places': geo_json}
     
     return render(request, 'index.html', context=context)
