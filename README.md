@@ -57,6 +57,23 @@
 ```bash
 python manage.py load_place https://your.json.url
 ```
+Структура JSON:
+```
+{
+    "title": "Title of the location",
+    "imgs": [
+        "https://link.to.image.1",
+        "https://link.to.image.2"
+    ],
+    "description_short": "Summary for the location or event",
+    "description_long": "Full description",
+    "coordinates": {
+        "lng": longitude_value,
+        "lat": latitude_value
+    }
+}
+```
+
 
 ### Цель проекта
 
